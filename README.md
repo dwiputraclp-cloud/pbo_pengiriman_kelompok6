@@ -1,1 +1,17 @@
-coba wiwi
+-- =====================================================
+-- DATABASE : db_pengiriman
+-- FILE     : db_pengiriman.sql
+-- DESKRIPSI:
+-- Berkas ini merupakan hasil ekspor (export) database
+-- yang digunakan pada aplikasi Pengiriman Kargo.
+--
+-- Database berisi tabel:
+-- 1. kargo
+-- 2. kargo_reguler
+-- 3. kargo_bahan_kimia
+-- 4. kargo_pecah_belah
+--
+-- Tabel-tabel tersebut saling terhubung menggunakan
+-- Primary Key dan Foreign Key untuk mendukung konsep
+-- OOP dan relasi data pada aplikasi.
+-- =====================================================
