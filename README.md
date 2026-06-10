@@ -118,3 +118,78 @@ Ketika kode di atas dijalankan, constructor akan otomatis membuat koneksi ke dat
 * **Object**: Objek dibuat menggunakan `$db = new Koneksi();`.
 * **Constructor**: Method `__construct()` berjalan otomatis saat objek dibuat.
 * **Reusability**: Class koneksi dapat digunakan kembali pada seluruh modul CRUD aplikasi.
+
+## Implementasi OOP Constructor pada Koneksi Database
+
+Pada aplikasi Pengiriman Kargo, koneksi database dibuat menggunakan konsep **Object-Oriented Programming (OOP)**. Constructor (`__construct()`) digunakan agar koneksi ke database berjalan secara otomatis saat objek dibuat tanpa perlu memanggil method koneksi secara manual.
+
+### File: koneksi.php
+
+```php
+<?php
+
+class Koneksi
+{
+    // Atribut private digunakan untuk menyimpan
+    // konfigurasi database (Encapsulation)
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $database = "db_pengiriman";
+
+    // Variabel untuk menyimpan objek koneksi
+    public $conn;
+
+    /*
+     * Constructor OOP
+     * Method __construct() akan dijalankan otomatis
+     * saat objek class Koneksi dibuat.
+     * Fungsi utamanya adalah membuat koneksi
+     * ke database MySQL secara otomatis.
+     */
+    public function __construct()
+    {
+        $this->conn = new mysqli(
+            $this->host,
+            $this->username,
+            $this->password,
+            $this->database
+        );
+
+        // Mengecek apakah koneksi berhasil
+        if ($this->conn->connect_error) {
+            die("Koneksi gagal : " . $this->conn->connect_error);
+        }
+    }
+}
+
+?>
+```
+
+### Contoh Penggunaan
+
+```php
+<?php
+
+require_once "koneksi.php";
+
+// Membuat objek Koneksi
+// Constructor akan dipanggil otomatis
+$db = new Koneksi();
+
+echo "Koneksi database berhasil";
+
+?>
+```
+
+### Penjelasan Implementasi OOP
+
+* **Class** → `Koneksi` digunakan sebagai cetak biru (blueprint) koneksi database.
+* **Object** → Dibuat menggunakan `$db = new Koneksi();`.
+* **Constructor** → Method `__construct()` dijalankan otomatis ketika objek dibuat.
+* **Encapsulation** → Data konfigurasi database disimpan dalam atribut `private`.
+* **Reusability** → Class koneksi dapat digunakan kembali pada seluruh proses CRUD aplikasi.
+
+### Implementasi Berkas Ekspor Database (.sql)
+
+File `db_pengiriman.sql` merupakan hasil ekspor database yang berisi struktur tabel, data awal, Primary Key, Foreign Key, serta relasi antar tabel. File ini digunakan untuk memudahkan proses backup, restore, dan distribusi database sehingga aplikasi dapat dijalankan pada komputer atau server lain tanpa membuat database dari awal.
