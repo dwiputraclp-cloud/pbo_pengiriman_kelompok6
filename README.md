@@ -29,15 +29,15 @@ Setiap jenis kargo memiliki atribut tambahan dan aturan perhitungan tarif pengir
 
 ```text
 Kelompok 6/
-â”œâ”€â”€ db_pengiriman.sql
-â”œâ”€â”€ Koneksi.php
-â”œâ”€â”€ kargo.php
-â”œâ”€â”€ KargoReguler.php
-â”œâ”€â”€ KargoBahanKimia.php
-â”œâ”€â”€ KargoPecahBelah.php
-â”œâ”€â”€ ManajemenLogistik.php
-â”œâ”€â”€ driver_polymorphism.php
-â””â”€â”€ README.md
+db_pengiriman.sql
+Koneksi.php
+kargo.php
+KargoReguler.php
+KargoBahanKimia.php
+KargoPecahBelah.php
+ManajemenLogistik.php
+driver_polymorphism.php
+README.md
 ```
 
 > Catatan: apabila di pembagian tugas disebut `ManajemenKargo.php`, pada proyek ini nama file yang digunakan adalah `ManajemenLogistik.php`. Fungsinya sama, yaitu sebagai class pengelola data kargo dan penerapan polymorphic collection.
