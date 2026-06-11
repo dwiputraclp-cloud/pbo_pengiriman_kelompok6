@@ -123,9 +123,9 @@ Contoh struktur folder untuk gambar UML:
 
 ```text
 Kelompok 6/
-â”œâ”€â”€ docs/
-â”‚   â””â”€â”€ class-diagram-uml.png
-â””â”€â”€ README.md
+docs/
+class-diagram-uml.png
+README.md
 ```
 
 Jika GitHub sudah menampilkan gambar, maka bagian ini akan menjadi dokumentasi visual relasi antar class pada proyek.
@@ -138,15 +138,15 @@ Relasi utama pada proyek ini adalah sebagai berikut:
 
 ```text
 Kargo (abstract class)
-â”œâ”€â”€ KargoReguler
-â”œâ”€â”€ KargoBahanKimia
-â””â”€â”€ KargoPecahBelah
+KargoReguler
+KargoBahanKimia
+KargoPecahBelah
 
 ManajemenLogistik
-â””â”€â”€ Mengelola kumpulan objek bertipe Kargo[]
+Mengelola kumpulan objek bertipe Kargo[]
 
 Driver Polymorphism
-â””â”€â”€ Menjalankan aplikasi dan menampilkan laporan polymorphic
+Menjalankan aplikasi dan menampilkan laporan polymorphic
 ```
 
 Penjelasan singkat:
