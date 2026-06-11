@@ -462,3 +462,5 @@ Berdasarkan riwayat commit yang terdapat pada repository, kontribusi anggota kel
 Proyek Sistem Manajemen Pengiriman Kargo telah menerapkan empat pilar utama OOP. Encapsulation digunakan untuk melindungi atribut class, inheritance digunakan untuk membentuk class turunan dari class induk `Kargo`, abstraction digunakan melalui abstract class dan abstract method, sedangkan polymorphism diterapkan melalui overriding method pada setiap subclass dan pemanggilan method secara dynamic binding pada `ManajemenLogistik.php`.
 
 Dengan penerapan OOP ini, kode program menjadi lebih terstruktur, mudah dikembangkan, dan setiap jenis kargo dapat memiliki aturan perhitungan tarif serta validasi SOP packing yang berbeda tanpa mengubah struktur utama program.
+
+![Kargo Management Tarif Flow](Kargo Management Tarif Flow.png)
