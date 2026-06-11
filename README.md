@@ -29,15 +29,15 @@ Setiap jenis kargo memiliki atribut tambahan dan aturan perhitungan tarif pengir
 
 ```text
 Kelompok 6/
-db_pengiriman.sql
-Koneksi.php
-kargo.php
-KargoReguler.php
-KargoBahanKimia.php
-KargoPecahBelah.php
-ManajemenLogistik.php
-driver_polymorphism.php
-README.md
+â”œâ”€â”€ db_pengiriman.sql
+â”œâ”€â”€ Koneksi.php
+â”œâ”€â”€ kargo.php
+â”œâ”€â”€ KargoReguler.php
+â”œâ”€â”€ KargoBahanKimia.php
+â”œâ”€â”€ KargoPecahBelah.php
+â”œâ”€â”€ ManajemenLogistik.php
+â”œâ”€â”€ driver_polymorphism.php
+â””â”€â”€ README.md
 ```
 
 > Catatan: apabila di pembagian tugas disebut `ManajemenKargo.php`, pada proyek ini nama file yang digunakan adalah `ManajemenLogistik.php`. Fungsinya sama, yaitu sebagai class pengelola data kargo dan penerapan polymorphic collection.
@@ -116,16 +116,16 @@ Jika nama folder proyek berbeda, sesuaikan URL dengan nama folder yang digunakan
 Letakkan gambar class diagram UML pada folder `docs` atau `assets`, lalu tampilkan pada README menggunakan sintaks Markdown berikut:
 
 ```markdown
-![Class Diagram UML](docs/class-diagram-uml.png)
+![Kargo Management Tarif Flow](Kargo Management %20Tarif Flow.png)
 ```
 
 Contoh struktur folder untuk gambar UML:
 
 ```text
 Kelompok 6/
-docs/
-class-diagram-uml.png
-README.md
+â”œâ”€â”€ docs/
+â”‚   â””â”€â”€ class-diagram-uml.png
+â””â”€â”€ README.md
 ```
 
 Jika GitHub sudah menampilkan gambar, maka bagian ini akan menjadi dokumentasi visual relasi antar class pada proyek.
@@ -138,15 +138,15 @@ Relasi utama pada proyek ini adalah sebagai berikut:
 
 ```text
 Kargo (abstract class)
-KargoReguler
-KargoBahanKimia
-KargoPecahBelah
+â”œâ”€â”€ KargoReguler
+â”œâ”€â”€ KargoBahanKimia
+â””â”€â”€ KargoPecahBelah
 
 ManajemenLogistik
-Mengelola kumpulan objek bertipe Kargo[]
+â””â”€â”€ Mengelola kumpulan objek bertipe Kargo[]
 
 Driver Polymorphism
-Menjalankan aplikasi dan menampilkan laporan polymorphic
+â””â”€â”€ Menjalankan aplikasi dan menampilkan laporan polymorphic
 ```
 
 Penjelasan singkat:
@@ -462,8 +462,5 @@ Berdasarkan riwayat commit yang terdapat pada repository, kontribusi anggota kel
 Proyek Sistem Manajemen Pengiriman Kargo telah menerapkan empat pilar utama OOP. Encapsulation digunakan untuk melindungi atribut class, inheritance digunakan untuk membentuk class turunan dari class induk `Kargo`, abstraction digunakan melalui abstract class dan abstract method, sedangkan polymorphism diterapkan melalui overriding method pada setiap subclass dan pemanggilan method secara dynamic binding pada `ManajemenLogistik.php`.
 
 Dengan penerapan OOP ini, kode program menjadi lebih terstruktur, mudah dikembangkan, dan setiap jenis kargo dapat memiliki aturan perhitungan tarif serta validasi SOP packing yang berbeda tanpa mengubah struktur utama program.
-<<<<<<< HEAD
 
 ![Kargo Management Tarif Flow](Kargo Management Tarif Flow.png)
-=======
->>>>>>> 37f8e300861eccc17a7388dd791ec7a3a0c41cfd
