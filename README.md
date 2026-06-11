@@ -116,7 +116,7 @@ Jika nama folder proyek berbeda, sesuaikan URL dengan nama folder yang digunakan
 Letakkan gambar class diagram UML pada folder `docs` atau `assets`, lalu tampilkan pada README menggunakan sintaks Markdown berikut:
 
 ```markdown
-![Class Diagram UML](docs/class-diagram-uml.png)
+![Kargo Management Tarif Flow](Kargo Management %20Tarif Flow.png)
 ```
 
 Contoh struktur folder untuk gambar UML:
