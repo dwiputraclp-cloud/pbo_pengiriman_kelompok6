@@ -37,20 +37,39 @@ class KargoBahanKimia extends Kargo
         return $this->jenisSertifikasiSandi;
     }
 
+    /**
+     * Mengambil angka dari tingkat bahaya.
+     * Aman untuk data berbentuk angka 1, 2, 3 maupun teks seperti "Class 1".
+     */
+    private function ambilAngkaTingkatBahaya()
+    {
+        if (is_numeric($this->tingkatBahaya)) {
+            return (int) $this->tingkatBahaya;
+        }
+
+        preg_match('/\d+/', (string) $this->tingkatBahaya, $hasil);
+
+        if (!empty($hasil)) {
+            return (int) $hasil[0];
+        }
+
+        return 1;
+    }
+
     // Overriding
     public function hitungTarifPengiriman()
     {
-        $tarifDasar = $this->beratBarang * $this->tarifDasarPerKg;
+        $tarifDasar = (float) $this->beratBarang * (float) $this->tarifDasarPerKg;
 
-        $biayaPenangananKhusus =
-            $this->tingkatBahaya * 100000;
+        $angkaTingkatBahaya = $this->ambilAngkaTingkatBahaya();
+        $biayaPenangananKhusus = $angkaTingkatBahaya * 100000;
 
         return $tarifDasar + $biayaPenangananKhusus;
     }
 
     public function validasiSOPPacking()
     {
-        return "Memerlukan sertifikasi {$this->jenisSertifikasiSandi}";
+        return "Memerlukan sertifikasi {$this->jenisSertifikasiSandi} untuk tingkat bahaya {$this->tingkatBahaya}";
     }
 }
 ?>
